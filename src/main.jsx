@@ -11,7 +11,11 @@ import {
 import './index.css'
 import App from './App.jsx'
 
-import Contact from './Contact.jsx'
+import Contact from './Contact.jsx';
+
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min.js'
+
 const router = createBrowserRouter([
   {
     path: "/",
