@@ -11,7 +11,7 @@ import {
 import './index.css'
 import App from './App.jsx'
 
-import Contact from './Contact.jsx';
+import Contact from './ContactMap.jsx';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js'

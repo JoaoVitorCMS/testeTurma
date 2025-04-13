@@ -1,0 +1,67 @@
+
+.contactContainer {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+  }
+  
+  .contactForm {
+    margin-bottom: 20px; 
+  }
+  
+  .contactForm h2 {
+    text-align: center;
+    color: indianred;
+    margin-bottom: 1rem;
+  }
+  
+  .contactForm input,
+  .contactForm textarea,
+  .contactForm button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; 
+  }
+  
+  .contactForm button {
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .contactForm button:hover {
+    background-color: #0056b3;
+  }
+  
+  .contactMap h2 {
+    text-align: center;
+    color: indianred;
+    margin-bottom: 1rem;
+  }
+  
+  
+  @media (min-width: 768px) {
+    .contactContainer {
+      flex-direction: row;
+      gap: 30px;
+      align-items: flex-start;
+    }
+  
+    .contactForm {
+      flex: 1; 
+      margin-bottom: 0;
+    }
+  
+    .contactMap {
+      flex: 1;
+      height: 400px; 
+    }
+  
+    .contactMap h2 {
+      text-align: left;
+    }
+  }

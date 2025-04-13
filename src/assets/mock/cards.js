@@ -1,22 +1,23 @@
-import photo01 from "../images/img.jfif"
-
+// src/assets/mock/cards.js
 export const cards = [
     {
-        text: "primeiro un", img: photo01
+      text: 'Projeto Web 1',
+      img: './assets/images/projeto1.png', 
+      githubLink: 'https://github.com/JoaoVitorCMS/teste-joaoCS'
     },
     {
-        text: "primeiro two", img: photo01
+      text: 'Aplicativo Mobile 1',
+      img: './assets/images/app1.png',
+      githubLink: 'https://github.com/JoaoVitorCMS/testeTurma'
     },
     {
-        text: "primeiro tree", img: photo01
+      text: 'Biblioteca JavaScript',
+      img: './assets/images/biblioteca.png', 
+      githubLink: 'https://github.com/JoaoVitorCMS/ProjetoEmGrupo-148'
     },
     {
-        text: "primeiro for", img: photo01
-    },
-    {
-        text: "primeiro five", img: photo01
-    },
-    {
-        text: "primeiro sixi", img: photo01
-    }
-]
+        text: 'Loja',
+        img: './assets/images/biblioteca.png', 
+        githubLink: 'https://github.com/JoaoVitorCMS/Lojinha-148'
+      },
+  ];

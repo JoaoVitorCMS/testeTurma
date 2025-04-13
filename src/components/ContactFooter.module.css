@@ -1,0 +1,13 @@
+/* src/components/ContactFooter.module.css */
+.contactFooter {
+    text-align: center;
+    padding: 10px;
+    background-color: #000000; /* Cor de fundo opcional */
+    border-top: 1px solid #eee; /* Borda superior opcional */
+  }
+  
+  .contactFooter p {
+    margin: 0;
+    font-size: 0.9em;
+    color: #555;
+  }

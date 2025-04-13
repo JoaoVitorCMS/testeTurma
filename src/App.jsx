@@ -1,63 +1,42 @@
+// src/App.jsx
+import { Menu } from './components/menu';
+import { cards } from "./assets/mock/cards";
+import Portfolio from './components/Portfolio';
+import Footer from './components/Footer';
+import style from './App.module.css';
 
-/* import style from './App.module.css' */
-import { Menu } from './components/menu'
-// import img01 from './assets/images/img.jfif'
-import { cards } from "./assets/mock/cards"
-import { useState } from 'react'
 function App() {
- const defaultPhoneNumber = "5541999999"
-
-const handleChange = (e) => {
-  const{name, value} = e.target;
-  setFormData({...formData, [name]: value})
-}
-
-const handleZap = () => {
-  const {name, email, message} = formData
-
-  const URLzap = `https://api.whatsapp.com/send?phone=${defaultPhoneNumber}%text=
-  Nome:%20${name}%0D%0A
-  Email:%20${email}%0D%0A
-  Mensagem:%20${message}%0D%0A`
-
-  window.open(URLzap, "_blank")
-}
- const [formData,setFormData] = useState({
-  name: "",
-  email: "",
-  message: "",
- })
-
   return (
     <>
-     <Menu option01='Sessao 01' option02='Sessao 02' option03='Contato'></Menu>
-     <main>
-      <section id='s1'>
-        <h2>Sessao 1</h2>
-        {/* <img src={img01} alt="COOOOCOCOOO" /> */}
-        {cards.map((item, index) => {
-          return(
-            <div key={index}>
-              <h5>{item.text}</h5>
-              <img src={item.img} alt={item.text} width={200} height={"auto"} />
+      <Menu option01='Sobre Mim' option02='Projetos' option03='Contato' />
+      <main>
+        <section id='s1'>
+          <div className={style.aboutMeContainer}>
+            <div className={style.aboutMeSection}>
+              <h2>Sobre Mim</h2>
+              <p>Olá! Meu nome é João Vitor Costa de Moura Santos e sou um desenvolvedor em formação apaixonado por transformar ideias em soluções digitais. Nordestino comunicativo, acredito que tecnologia e humanidade andam juntas!</p>
+              <p>Tenho experiência básica em Java, HTML/CSS, JavaScript e estou explorando o React. Também já trabalhei com bancos de dados e adoro observar como as pessoas interagem com sistemas — isso me ajuda a criar interfaces mais intuitivas.</p>
+              <p>Minha jornada no mundo da programação começou no técnico de TI do SENAI, onde descobri que código é como poesia: precisa de lógica, mas também de criatividade. Hoje, além do técnico, curso Ciência da Computação e pratico através de projetos pessoais.</p>
+              <p>Busco ser "útil" em tudo — não só na técnica, mas na capacidade de dialogar, aprender e entregar resultados que realmente façam diferença. Quero oportunidades para evoluir e contribuir com minha energia e curiosidade!</p>
+              <h3>Habilidades Principais:</h3>
+              <ul>
+                <li>Java (básico)</li>
+                <li>HTML/CSS</li>
+                <li>JavaScript</li>
+                <li>React (em aprendizado)</li>
+                <li>Banco de dados</li>
+                <li>Comunicação e trabalho em equipe</li>
+              </ul>
             </div>
-          )
-        })}
-      </section>
-      <section id='s2'>
-        <h2>Sessao 2</h2>
-      </section>
-      <section id='s3'>
-        <h2>Contato</h2>
-        <br />
-        <input placeholder="Insira seu nome" type="text" id='name' name='name' value={formData.name} onChange={handleChange} required/>
-        <input placeholder= "Insira seu email" type="text" id='email' name='email'value={formData.email} onChange={handleChange}required/>
-        <textarea placeholder="Insira sua messagem" type="text" id='message' name='message'value={formData.message} onChange={handleChange}required></textarea>
-        <button onClick={handleZap}>Enviar Menssagem</button>
-      </section>
-     </main>
+          </div>
+        </section>
+        <section id='portfolio'> {/* Adicionei o ID 'portfolio' aqui */}
+          <Portfolio cardsData={cards} />
+        </section>
+      </main>
+      <Footer />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
