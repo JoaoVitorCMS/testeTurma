@@ -1,4 +1,6 @@
-
+.section s1{
+  background-color: #007bff;
+}
 .aboutMeSection {
     padding: 20px;
     text-align: center;
@@ -49,7 +51,7 @@
     border: 1px solid #ccc;
     padding: 15px;
     border-radius: 8px;
-    background-color: #f9f9f9;
+    background-color: #575454;
     text-align: center; 
   }
   
@@ -120,3 +122,33 @@
 .aboutMeSection ul li {
   margin-bottom: 0.5em;
 }
+
+.skillIcon {
+  width: 24px; /* Ajuste o tamanho do ícone conforme necessário */
+  height: 24px;
+  vertical-align: middle; /* Alinhar verticalmente com o texto */
+  margin-right: 5px;
+}
+
+.skillLevel {
+  display: inline-block;
+  width: 80px; /* Largura da barra de nível */
+  height: 8px;
+  background-color: #eee;
+  border-radius: 4px;
+  margin-left: 10px;
+  position: relative;
+  vertical-align: middle;
+}
+
+.skillLevel-inner {
+  background-color: #007bff; /* Cor da barra de nível */
+  height: 100%;
+  border-radius: 4px;
+  position: absolute;
+  left: 0;
+}
+
+.skillLevel-inner.basico { width: 30%; }
+.skillLevel-inner.em-aprendizado { width: 60%; }
+.skillLevel-inner.bom { width: 90%; }

@@ -19,7 +19,7 @@ function SetViewOnClick({ animateRef, coords }) {
 }
 
 function Contact() {
-  const yourHomeCoordinates = [-25.407757, -49.2356084];
+  const yourHomeCoordinates = [-25.4079968, -49.2337112];
   const zoomLevel = 15;
   const animateRef = React.useRef(false);
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
@@ -77,7 +77,7 @@ function Contact() {
             center={yourHomeCoordinates}
             zoom={zoomLevel}
             scrollWheelZoom={false}
-            style={{ width: '100%', height: '400px' }}
+            style={{ width: '100%', height: '600px' }}
           >
             <TileLayer
               attribution='© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
